@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Single Product | order {% endblock %}
+
+
+
+{% block content %}
+
+<div class="row d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+        <br>
+        <div class="card-body">
+        <h5 class="card-title">{{ product.title }}}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <br>
+        <div>
+            {{ product.price }}
+        </div>
+        <br>
+
+        <p>
+            Your Order has been placed successfully !
+        </p>
+        </div>
+        <a style="text-decoration: none;" href="{% url 'home' %}"> Home </a> 
+    </div>
+</div>
+
+{% endblock %}
